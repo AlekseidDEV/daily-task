@@ -6,7 +6,7 @@
     <div>
         <q-splitter v-model="splitterModel">
             <template #before>
-                hello
+                before
             </template>
             <template #after>
                 after
