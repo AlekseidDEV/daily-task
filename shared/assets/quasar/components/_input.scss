@@ -1,0 +1,25 @@
+@use "../variables";
+
+.q-field--standout .q-field__control{
+  background: rgba(25,25,25, 0.05);
+}
+
+.q-field--standout.q-field--highlighted .q-field__control {
+  border: 1px solid variables.$primary;
+  background: none;
+  box-shadow: none;
+}
+
+.q-field--standout.q-field--focused .q-field__control{
+  background: white;
+  color: red;
+}
+
+.q-field--standout.q-field--highlighted .q-field__native, .q-field--standout.q-field--highlighted .q-field__prefix, .q-field--standout.q-field--highlighted .q-field__suffix, .q-field--standout.q-field--highlighted .q-field__prepend, .q-field--standout.q-field--highlighted .q-field__append, .q-field--standout.q-field--highlighted .q-field__input {
+  color: grey;
+}
+
+
+.q-field--standout .q-field__control:before{
+  background: none;
+}

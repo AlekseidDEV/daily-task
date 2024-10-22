@@ -1,3 +1,5 @@
+@use "../quasar/index";
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,5 +7,17 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 500;
 }

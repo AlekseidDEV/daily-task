@@ -1,15 +1,19 @@
 <script setup lang="ts">
-  const splitterModel = ref(50)
+const splitterModel = ref(74)
 </script>
 
 <template>
     <div>
-        <q-splitter v-model="splitterModel">
+        <q-splitter
+            v-model="splitterModel"
+            style="height: 100vh"
+            :limits="[30, 74]"
+        >
             <template #before>
-                hello
+                <tasks-list-view/>
             </template>
             <template #after>
-                after
+                <tasks-right-view/>
             </template>
         </q-splitter>
     </div>

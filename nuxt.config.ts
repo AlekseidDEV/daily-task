@@ -11,13 +11,19 @@ export default defineNuxtConfig({
     ],
 
     modules: [
-        'nuxt-quasar-ui',
-        '@pinia/nuxt',
-        '@nuxt/eslint'
+      'nuxt-quasar-ui',
+      '@pinia/nuxt',
+      '@nuxt/eslint',
+      'nuxt-tiptap-editor',
     ],
 
+    tiptap: {
+        prefix: 'Tiptap'
+    },
+
     css: [
-        "@/shared/assets/styles/main.scss"
+        'quasar/css',
+        "@/shared/assets/styles/main.scss",
     ],
 
     vite: {
@@ -30,7 +36,15 @@ export default defineNuxtConfig({
         }
     },
 
-    quasar: {},
+    quasar: {
+        extras: {
+            font: 'roboto-font'
+        },
+        cssAddon: true,
+        plugins: [
+            'LocalStorage'
+        ]
+    },
 
     typescript: {
         typeCheck: true
