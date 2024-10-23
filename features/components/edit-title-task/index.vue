@@ -36,7 +36,6 @@ watch(() => props.dynamicTitle, (newValue) => {
             @update:model-value="useChangeTitleTask(fieldValue, idTask)"
             @blur="editTitle = false"
             @keyup.enter="editTitle = false"
-            @keyup.space="fieldValue += ' '"
         />
         <div/>
     </div>

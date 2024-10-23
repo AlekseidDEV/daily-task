@@ -21,7 +21,10 @@
     "nuxt-tiptap-editor": "^2.0.0",
     "pinia": "^2.2.4",
     "vue": "3.5.7",
-    "vue-router": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
     "vue-tsc": "^2.1.6"
   }
 }

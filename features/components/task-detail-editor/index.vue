@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {useUpdateDescription} from "~/features/components/editor/model/useUpdateDescription";
 
+import {useUpdateDescription} from "~/features/components/task-detail-editor/model/useUpdateDescription";
 import {Editor} from "@tiptap/vue-3";
-import type {Ref} from "vue";
 
+import type {Ref} from "vue";
 
 const props = defineProps<{
   descriptionTask: string

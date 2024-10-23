@@ -9,7 +9,7 @@ const props = defineProps<{
 
 const modifiedChildrenList = computed(() => {
   return props.tasks.map((item) => {
-    return {...item, header: 'task'}
+    return {...item, body: 'task'}
   })
 })
 
@@ -36,7 +36,7 @@ const treeList = reactive([
                 <span class="ui-tree__counter">{{count}}</span>
             </div>
         </template>
-        <template #header-task="{node}">
+        <template #body-task="{node}">
             <slot
                 :node="node"
                 name="insert-task"

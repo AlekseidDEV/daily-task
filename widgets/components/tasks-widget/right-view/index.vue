@@ -24,7 +24,7 @@ const isViewBlock = computed(() => currentTask.value ? true : false)
                 tag-order="h3"
                 :id-task="currentTask!.id"
             />
-            <editor
+            <task-detail-editor
                 :description-task="currentTask!.description"
                 :id-task="currentTask!.id"
             />

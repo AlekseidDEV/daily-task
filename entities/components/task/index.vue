@@ -1,17 +1,32 @@
 <script setup lang="ts">
-defineProps<{
-  title: string
+import type {Tasks} from "~/entities/components/task/model/interface/tasks";
+
+const props = defineProps<{
+  task: Tasks
+  accented?: boolean
 }>()
 
+const isComplete = computed(() => {
+  return props.task.complete ? 'task--completed' : ''
+})
+
+const isAccented = computed(() => {
+  return props.accented ? 'task--border-bottom' : ''
+})
 </script>
 
 <template>
     <div
-        class="task__wrapper">
+        class="task__wrapper"
+        :class="isComplete"
+    >
         <div class="task__content">
             <slot name="prepend"/>
-            <div class="task__task-field">
-                <slot name="title">{{title}}</slot>
+            <div
+                class="task__task-field"
+                :class="isAccented"
+            >
+                <slot name="title">{{task.title}}</slot>
             </div>
         </div>
     </div>
@@ -30,12 +45,17 @@ defineProps<{
       width: inherit;
     }
     &__task-field{
-      border-bottom: 1px solid variables.$grey-2;
       width: inherit;
       padding: 10px;
     }
     &--highlighted{
       background: variables.$grey-2;
+    }
+    &--completed{
+      color: variables.$grey-5;
+    }
+    &--border-bottom{
+      border-bottom: 1px solid variables.$grey-2;
     }
   }
 </style>

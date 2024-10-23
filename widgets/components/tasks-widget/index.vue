@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import {useTaskStore} from "~/entities/components/task/model/stores/store";
+
+const store = useTaskStore()
 const splitterModel = ref(74)
+
+onMounted(() => {
+  store.getList()
+})
 </script>
 
 <template>
@@ -10,10 +17,10 @@ const splitterModel = ref(74)
             :limits="[30, 74]"
         >
             <template #before>
-                <tasks-list-view/>
+                <tasks-widget-list-view/>
             </template>
             <template #after>
-                <tasks-right-view/>
+                <tasks-widget-right-view/>
             </template>
         </q-splitter>
     </div>

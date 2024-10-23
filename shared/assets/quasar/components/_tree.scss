@@ -21,6 +21,11 @@
         padding-bottom: 0;
       }
 
+      .q-tree__node-body{
+        padding: 0;
+        color: variables.$grey-10;
+      }
+
       .q-tree__node-header{
         padding: 0;
         border-radius: 4px;

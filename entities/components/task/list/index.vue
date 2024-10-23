@@ -22,7 +22,8 @@ const store = useTaskStore()
                 <template #insert-task="{node}">
                     <task
                         :key="node.id"
-                        :title="node.title"
+                        :task="node"
+                        :accented="true"
                         :class="store.selectedTask?.id === node.id ? 'task--highlighted' : ''"
                         @click="store.selectTask(node.id)"
                     >

@@ -1,6 +1,7 @@
 import {useTaskStore} from "~/entities/components/task/model/stores/store";
 import {LocalStorage} from 'quasar'
 import {taskExemplar} from "~/shared/utils/taskExemplar";
+
 import type {Tasks} from "~/entities/components/task/model/interface/tasks";
 
 export const useAddTask = (text: string) => {

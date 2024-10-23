@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {useTaskStore} from "~/entities/components/task/model/stores/store";
-import type {ListType} from "~/widgets/components/tasks/list-view/model/listType";
-import Input from "~/shared/components/ui/input.vue";
+
+import type {ListType} from "~/widgets/components/tasks-widget/list-view/model/listType";
 
 const store = useTaskStore()
 
@@ -9,10 +9,6 @@ const listTypes: ListType[] = [
   {name: 'Назначено', methodForList: 'getActiveTasks'},
   {name: 'Выполнено', methodForList: 'getCompleteTasks'},
 ]
-
-onMounted(() => {
-  store.getList()
-})
 </script>
 
 <template>
