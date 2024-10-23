@@ -18,7 +18,7 @@ watch(() => props.isComplete, (newValue) => {
         <q-checkbox
             v-model="checkboxModel"
             :color="checkboxModel ? 'grey-3' : 'grey-6'"
-            size="33px"
+            size="34px"
             :val="idTask"
             @update:model-value="useCompleteTask(checkboxModel, props.idTask)"
         />

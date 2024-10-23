@@ -46,7 +46,7 @@ const isAccented = computed(() => {
     }
     &__task-field{
       width: inherit;
-      padding: 10px;
+      padding: 10px 0px;
     }
     &--highlighted{
       background: variables.$grey-2;

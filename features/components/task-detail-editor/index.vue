@@ -31,9 +31,6 @@ onMounted(() => {
     onBlur() {
       useUpdateDescription(editor.value!.getHTML(), props.idTask)
     },
-    onFocus(props) {
-      console.log(props.editor)
-    },
   })
 })
 
@@ -53,48 +50,11 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss">
-@use "../../../shared/assets/quasar/variables";
-
 .editor{
   &__wrapper{
     margin-top: 10px;
     padding-left: 13px;
     padding-right: 13px;
   }
-}
-
-.ProseMirror {
-  ul > li {
-    list-style-type: none;
-    padding-left: 17px;
-    position: relative;
-    p{margin-bottom: 10px;}
-    &::before{
-      position: absolute;
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 20px;
-      background: variables.$blue-7;
-      left: 0;
-      top: 8px;
-    }
-  }
-}
-
-.ProseMirror-focused{
-  outline: none;
-}
-
-.ProseMirror-focused.tiptap p.is-editor-empty:first-child::before {
-  color: variables.$grey-6;
-  content: attr(data-placeholder);
-  float: left;
-  height: 0;
-  pointer-events: none;
-}
-p.is-editor-empty{
-  font-size: 14px;
-  font-weight: 300;
 }
 </style>

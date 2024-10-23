@@ -32,8 +32,8 @@
         margin-top: 0;
       }
 
-      .q-tree__node-header:hover{
-        background: variables.$grey-2;
+      .q-tree__node-body:hover{
+        background: variables.$grey-1;
         transition: 0.3s;
       }
       .q-tree__node-header-content{
