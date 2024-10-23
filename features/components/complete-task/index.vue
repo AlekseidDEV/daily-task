@@ -25,6 +25,6 @@ watch(() => props.isComplete, (newValue) => {
     </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 </style>

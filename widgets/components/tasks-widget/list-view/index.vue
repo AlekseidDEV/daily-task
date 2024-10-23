@@ -30,6 +30,6 @@ const listTypes: ListType[] = [
     </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 </style>

@@ -6,6 +6,6 @@
     <div>на будующее</div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 </style>
