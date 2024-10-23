@@ -3,6 +3,10 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
 
+    plugins: [
+        '~/plugins/tiptapExtensions'
+    ],
+
     components: [
         {path: '~/shared/components'},
         {path: '~/widgets/components'},
@@ -18,7 +22,7 @@ export default defineNuxtConfig({
     ],
 
     tiptap: {
-        prefix: 'Tiptap'
+        prefix: 'Tiptap',
     },
 
     css: [
@@ -42,7 +46,8 @@ export default defineNuxtConfig({
         },
         cssAddon: true,
         plugins: [
-            'LocalStorage'
+            'LocalStorage',
+            'Notify'
         ]
     },
 

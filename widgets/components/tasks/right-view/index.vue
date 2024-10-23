@@ -24,7 +24,10 @@ const isViewBlock = computed(() => currentTask.value ? true : false)
                 tag-order="h3"
                 :id-task="currentTask!.id"
             />
-            <editor/>
+            <editor
+                :description-task="currentTask!.description"
+                :id-task="currentTask!.id"
+            />
         </div>
         <div v-else>Показывать, если задача не выбрана</div>
     </div>
