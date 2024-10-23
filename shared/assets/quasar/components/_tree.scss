@@ -1,0 +1,49 @@
+@use "../variables";
+
+.ui-tree {
+  .q-tree &__counter {
+    margin-left: 8px;
+    font-size: 11.5px;
+    color: variables.$grey-6;
+  }
+  .q-tree &__name-list {
+    color: variables.$grey-10;
+    font-weight: bold;
+    font-size: 11.5px;
+  }
+
+  .q-tree{
+    &__children {
+      padding-left: 0;
+
+      .q-tree__node{
+        padding-left: 10px;
+        padding-bottom: 0;
+      }
+
+      .q-tree__node-body{
+        padding: 0;
+        color: variables.$grey-10;
+      }
+
+      .q-tree__node-header{
+        padding: 0;
+        border-radius: 4px;
+        margin-top: 0;
+      }
+
+      .q-tree__node-body:hover{
+        background: variables.$grey-1;
+        transition: 0.3s;
+      }
+      .q-tree__node-header-content{
+        border-radius: 0px;
+      }
+    }
+  }
+}
+
+body.desktop .q-focusable:focus > .q-focus-helper, body.desktop .q-manual-focusable--focused > .q-focus-helper, body.desktop .ui-tree .q-hoverable:hover > .q-focus-helper {
+  background: none;
+  opacity: 0;
+}

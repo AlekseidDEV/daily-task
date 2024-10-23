@@ -4,7 +4,7 @@
 
 <template>
     <div class="tasks-page__wrapper">
-        <tasks/>
+        <tasks-widget/>
     </div>
 </template>
 
